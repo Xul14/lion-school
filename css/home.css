@@ -1,0 +1,67 @@
+
+body{
+    background-color:#3347B0;
+}
+
+header{
+    background-color:#3347B0;
+    width: 100%;
+    height: 6rem;
+}
+.conteudos{
+    display: flex;   
+}
+.logo{
+    margin-top: 0.5%;
+    margin-left: 96px;
+    width: 60px;
+    height: 75.03px;
+}
+.titulo{
+    font-size: 24px;
+    padding-top: 1%;
+    margin-left: 1%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #ffff   
+}
+.exit{
+    gap: 2%;
+    margin-top:1.2%;
+    font-size: 36px;
+    color: #fff;
+    margin-left: 90rem;
+}
+.sair{
+    font-size: 36px;
+}
+ /* Header feito */
+ .container-main{
+     background-color: #fff;
+     width: 100%;
+     height:45rem;
+    
+ }
+ .conteudo-main{
+    display: flex;
+    flex-direction: column;  
+    margin-left: 5%;
+
+ }
+ .description{
+    font-size: 60.3793px;
+    margin-top: 5%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ }
+ .image-dispositivos{
+     width: 450px;
+     height: 262px;
+     margin-top: 4%;
+ }
+ .image-studant{
+    width: 257px;
+    height: 426px;
+ }
+.footer{
+    width: 1440px;
+    height: 140px;
+}
