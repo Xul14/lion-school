@@ -1,67 +1,257 @@
 
-body{
-    background-color:#3347B0;
-}
-
-header{
-    background-color:#3347B0;
+body {
     width: 100%;
-    height: 6rem;
-}
-.conteudos{
-    display: flex;   
-}
-.logo{
-    margin-top: 0.5%;
-    margin-left: 96px;
-    width: 60px;
-    height: 75.03px;
-}
-.titulo{
-    font-size: 24px;
-    padding-top: 1%;
-    margin-left: 1%;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: #ffff   
-}
-.exit{
-    gap: 2%;
-    margin-top:1.2%;
-    font-size: 36px;
-    color: #fff;
-    margin-left: 90rem;
-}
-.sair{
-    font-size: 36px;
-}
- /* Header feito */
- .container-main{
-     background-color: #fff;
-     width: 100%;
-     height:45rem;
-    
- }
- .conteudo-main{
+    height: 100vh;
     display: flex;
-    flex-direction: column;  
-    margin-left: 5%;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
- }
- .description{
-    font-size: 60.3793px;
-    margin-top: 5%;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
- }
- .image-dispositivos{
-     width: 450px;
-     height: 262px;
-     margin-top: 4%;
- }
- .image-studant{
+header {
+    /* height: 200.67vh; */
+    display: flex;
+    align-items: center;
+    padding: 0 110px;
+    justify-content: space-between;
+    width: 100%;
+    height: 7rem;
+    background-color: #3347B0;
+}
+
+main {
+    display: flex;
+    margin-left: 10%;
+}
+
+footer {
+    width: 100%;
+    height: 17vh; 
+    display: flex;
+    justify-content: space-between;
+    padding: 0 96px;
+    align-items: center;
+    background-color: #3347B0;
+    margin-top: 3%;
+}
+
+.logo-header {
+    width: 10vw;
+    gap: 11px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo-da-escola {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #FFFFFF;;
+}
+
+.exit {
+    color: #FFFFFF;;
+    align-items: center;
+    font-size: 2.2rem;
+    gap: 12px;
+    display: flex;
+    flex-direction: row;
+}
+
+.text-sair {
+    font-weight: 500;
+}
+
+.description-curso span {
+    color: #3347B0
+}
+.container-cards-cursos {
+    margin-top: 3%;
+    margin-left: 11%;
+}
+
+.description-curso {
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+}
+
+.description-curso p {
+    font-size: 2.8rem;
+    font-weight: 280;
+    width: 25vw;
+    margin-top: 15%;
+}
+
+.image-dispositivos {
+    width: 380px;
+    height: 250px;
+}
+
+.image-studant {
     width: 257px;
-    height: 426px;
- }
-.footer{
-    width: 1440px;
-    height: 140px;
+    height: 400px;
+    margin-top: 4%;
+}
+
+.description-curso span {
+    color: var(--header-color);
+    font-weight: 500;
+}
+
+.container-cards-cursos {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.titulo-do-curso {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.titulo-do-curso i {
+    color: #ffffff;
+    font-size: 4.5rem;
+}
+
+.tipo-curso {
+    font-size: 4rem;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+
+.container-contatos{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1%;
+    /* gap: 10px; */
+}
+
+.icones {
+    display: flex;
+    color: #ffffff;
+    align-items: center;
+    gap: 24px;
+    padding: 8px;
+}
+
+.icones i {
+    font-size: 1.5rem;
+}
+
+.copyright {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.redes-sociais-icones {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+
+.social-media-icon {
+    height: 48px;
+    width: 48px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: #ffffff;
+    font-size: 1.5rem;
+    transition: all .5s;
+}
+
+.social-media-icon:hover {
+    background-color: #3347B0;
+    border: 2px solid  #3347B0;
+}
+.curso-container {
+    width: 400px;
+    height: 200px;
+    background-color:#3347B0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    box-shadow: 12px 12px 4px rgba(51, 71, 176, 0.5);
+    transition: .5s;
+    cursor: pointer;
+}
+
+.curso-container:hover {
+    border: 5px solid #f5f5f5;
+}
+
+/* RESPONSIVE MOBILE */
+@media (max-width:640px) {
+    header {
+        justify-content: space-around;
+        padding: 20px 0;
+    }
+
+    .logo-header img {
+        height: 65px;
+        width: 50px;
+    }
+
+    .titulo-da-escola {
+        font-size: 1.40rem;
+    }
+
+    .exit {
+        font-size: 1.5rem;
+    }
+
+    main {
+        flex-direction: column;
+        align-items: center;
+        gap: 28px;
+        padding: 30px;
+    }
+
+    .description-curso p {
+        font-size: 2rem;
+        width: 290px;
+        text-align: center;
+    }
+
+    .image-dispositivos {
+        display: none;
+    }
+
+    .curso-container {
+        width: 260px;
+        height: 160px;
+    }
+
+    .tipo-curso {
+        font-size: 2rem;
+    }
+    .container-cards-cursos{
+        margin-right: 3.5rem;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 32px;
+        padding: 32px;
+        height: auto;
+    }
+
+    .copyright {
+        width: 375px;
+        border-top: 1px solid #FFFFFF;
+        border-bottom: 1px solid #FFFFFF;
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .redes-sociais-icones {
+        flex-direction: column;
+    }
 }
