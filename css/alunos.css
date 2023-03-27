@@ -1,5 +1,5 @@
 body{
-    background-color: aqua;
+    /* background-color:coral; */
     width: 100%;
     height: 100vh;
 }
@@ -13,6 +13,17 @@ header {
     height: 7rem;
     background-color: #3347B0;
 }
+footer {
+    width: 100%;
+    height: 17vh; 
+    display: flex;
+    justify-content: space-between;
+    padding: 0 96px;
+    align-items: center;
+    background-color: #3347B0;
+    margin-top: 7%;
+}
+
 .logo-header {
     width: 10vw;
     gap: 11px;
@@ -24,11 +35,11 @@ header {
 .titulo-da-escola {
     font-size: 1.6rem;
     font-weight: 700;
-    color: #FFFFFF;;
+    color: #FFFFFF;
 }
 
 .exit {
-    color: #FFFFFF;;
+    color: #FFFFFF;
     align-items: center;
     font-size: 2.2rem;
     gap: 12px;
@@ -38,4 +49,215 @@ header {
 
 .text-sair {
     font-weight: 500;
+}
+/* Header feito */
+
+.barra-status{
+    background-color: #BCC2E5;
+    width: 100%;
+    height: 2.5rem;
+    display: flex;
+    flex-direction: row;
+}
+.text-status{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 140px;
+}
+.chatbox-status{
+    display: flex;
+    justify-content: center;
+    margin-left: 130vh;
+    align-items: center;
+    gap: 10%;
+    margin-right: 7%;
+}
+/* ---------------- */
+.container-dos-alunos{
+    width: 100%;
+    height: 100vh;
+}
+.titulo-do-curso{
+    display: flex;
+    justify-content: center;
+    font-size: 6vh;
+    color:#3347B0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-top: 2.5%;   
+}
+.container-cards{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3%;
+    /* margin-left: 2%; */
+    margin-top: 2.5%;
+
+}
+.card-aluno{
+    width: 10%;
+    height: 30%;
+    background-color: #3347B0;
+}
+.p-aluna{
+    padding-left: 3vh;
+}    
+.container-contatos{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1%;
+    /* gap: 10px; */
+}
+
+.icones {
+    display: flex;
+    color: #ffffff;
+    align-items: center;
+    gap: 24px;
+    padding: 8px;
+}
+
+.icones i {
+    font-size: 1.5rem;
+}
+
+.copyright {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.redes-sociais-icones {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+
+.social-media-icon {
+    height: 48px;
+    width: 48px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: #ffffff;
+    font-size: 1.5rem;
+    transition: all .5s;
+}
+
+.social-media-icon:hover {
+    background-color: #3347B0;
+    border: 2px solid  #3347B0;
+}
+.curso-container {
+    width: 400px;
+    height: 200px;
+    background-color:#3347B0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    box-shadow: 12px 12px 4px rgba(51, 71, 176, 0.5);
+    transition: .5s;
+    cursor: pointer;
+}
+
+.curso-container:hover {
+    border: 5px solid #f5f5f5;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    place-items: end;
+    /* padding-right: 6vh; */
+    margin-left: 25%;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 2;
+    right: 2;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    background-color: #1a2975;
+    margin-right: 1vh;
+}
+
+.dropbtn {
+    background-color: rgb(58, 61, 243);
+    color: #fff;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    box-shadow: 0  10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #4a69ff;
+}
+
+/* RESPONSIVE MOBILE */
+@media (max-width:640px) {
+    header {
+        justify-content: space-around;
+        padding: 20px 0;
+    }
+
+    .logo-header img {
+        height: 65px;
+        width: 50px;
+    }
+
+    .titulo-da-escola {
+        font-size: 1.40rem;
+    }
+
+    .exit {
+        font-size: 1.5rem;
+    }
+
+    main {
+        flex-direction: column;
+        align-items: center;
+        gap: 28px;
+        padding: 30px;
+    }
+    .container-dos-alunos{
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 32px;
+        padding: 32px;
+        height: auto;
+    }
+
+    .copyright {
+        width: 375px;
+        border-top: 1px solid #FFFFFF;
+        border-bottom: 1px solid #FFFFFF;
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .redes-sociais-icones {
+        flex-direction: column;
+    }
+
 }

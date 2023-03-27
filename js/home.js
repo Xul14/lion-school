@@ -20,7 +20,7 @@ const criarCards = (card) => {
     const nomeDoCurso = document.createElement ('h1')
     nomeDoCurso.classList.add('tipo-curso')
 
-    nomeDoCurso.textContent = card.nome
+    nomeDoCurso.textContent = card.sigla
 
     cardsCursos.append(containerCurso)
     containerCurso.append(tipoCurso)
