@@ -1,5 +1,5 @@
-export const carregarCards = async () => {
-    const url = ``
+export const carregarCards = async() => {
+    const url = `http://localhost:8080/v1/lion-school/cursos`
     const response = await fetch(url)
     const card = await response.json()
 
