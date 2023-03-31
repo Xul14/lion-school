@@ -26,7 +26,10 @@ const criarCards = (card) => {
     nomeDoCurso.classList.add('tipo-curso')
     nomeDoCurso.textContent = card.sigla
 
-    console.log();
+    // cardsCursos.addEventListener('click', () => {
+    //     localStorage.setItem('curso', nomeDoCurso.textContent)
+    //     window.location.href = ''
+    // })
 
     cardsCursos.append(containerCurso)
     containerCurso.append(tipoCurso)
