@@ -2,7 +2,6 @@
 //import { cursos } from "../json/cursos.js"
 
 import { carregarCards } from "../js/ApiHome.js"
-console.log('entrei');
 
 
 const cards = await carregarCards();
@@ -26,10 +25,11 @@ const criarCards = (card) => {
     nomeDoCurso.classList.add('tipo-curso')
     nomeDoCurso.textContent = card.sigla
 
-    // cardsCursos.addEventListener('click', () => {
-    //     localStorage.setItem('curso', nomeDoCurso.textContent)
-    //     window.location.href = ''
-    // })
+    cardsCursos.addEventListener('click', () => {
+        localStorage.setItem('curso', nomeDoCurso.textContent)
+        
+        window.location.href = 'http://127.0.0.1:5500/html/turma.html'
+    })
 
     cardsCursos.append(containerCurso)
     containerCurso.append(tipoCurso)
