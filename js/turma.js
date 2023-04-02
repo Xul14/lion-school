@@ -3,19 +3,11 @@
 import { carregarAlunosCurso } from "../js/ApiTurma.js"
 
 const carregarAlunos = await carregarAlunosCurso()
+const nomeCurso = document.getElementById('titulo-do-curso')
 
 const carregarTurma = (turma) => {
 
-    // const tituloDoCurso = document.createElement('h2')
-    // tituloDoCurso.classList.add('titulo-do-curso')
-    // tituloDoCurso.textContent = turma.curso.nome
-
-    // const pai = document.getElementById('titulo-do-curso')
-    // const nomeTitulo = document.createElement('h2')
-    // nomeTitulo.classList.add()
-    // nomeTitulo.textContent = turma.NomeCurso.toUpperCase()
-
-    // pai.append(nomeTitulo)
+    nomeCurso.innerHTML = turma.curso.slice(6)
 
 
     const cardDoAluno = document.createElement('div')
@@ -42,7 +34,6 @@ const carregarTurma = (turma) => {
 }
 
 const carregarDadosDaTurma = () => {
-
     const elementosDoContainerTurma = document.getElementById('container-cards')
     const curso = carregarAlunos.curso.map(carregarTurma)
     elementosDoContainerTurma.replaceChildren(...curso)
