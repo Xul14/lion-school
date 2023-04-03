@@ -1,56 +1,99 @@
+'use strict'
 
-// import { carregarCardsMatricula } from '../js/ApiAluno.js'
+import { getAlunosMatriculas } from "../js/ApiAluno.js";
 
-// console.log();
+const showAlunosMatriculas = await getAlunosMatriculas();
 
-// const matriculaAluno = await (carregarCardsMatricula)
+const criarCardAluno = (aluno) => {
+    
+    const containerCard = document.createElement('div')
+    containerCard.classList.add('card-aluno')
 
-// 'use strict'
+    const imgAluno = document.createElement('img')
+    imgAluno.classList.add('img-aluno')
+    imgAluno.src = `${aluno.foto}`
 
-// const cardAluno = (matricula) => {
+    const nomeAluno = document.createElement('p')
+    nomeAluno.classList.add('nome-aluno')
+    nomeAluno.textContent = aluno.nome
 
-//     const cardAluno = document.createElement('div')
-//     cardAluno.classList.add('container-aluno')
+    //cardContainer.append(containerCard)
+    containerCard.append(imgAluno, nomeAluno)
 
-//     const imgAluno = document.createElement('img')
-//     imgAluno.classList.add('img-aluno')
-//     imgAluno.src = matricula.aluno.foto
+    return containerCard
+}
+const criarCardGrafico = () => {
 
-//     const nomeAluno = document.createElement('p')
-//     nomeAluno.classList.add('nome-aluno')
-//     nomeAluno.textContent = matricula.aluno.nome
+    const containerPai = document.createElement('div')
+    containerPai.classList.add('card-pai')
 
-//     cardAluno.append(imgAluno, nomeAluno)
+    const disciplinaContainer = document.createElement('div')
+    disciplinaContainer.classList.add('disciplina-container')
 
-//     return cardAluno
-// }
+    const disciplinaBarras = document.createElement('div')
+    disciplinaBarras.classList.add('disciplina-barras')
 
-// const cardGrafico = () => {
+    const nomeDisciplinaContainer = document.createElement('div')
+    nomeDisciplinaContainer.classList.add('nome-disciplina-container')
 
-//     const cardGrafico = document.createElement('div')
-//     cardGrafico.classList.add('container-grafico')
+    showAlunosMatriculas.curso[0].disciplinas.forEach(disciplina => {
 
-//     const numeros = document.createElement('div')
-//     numeros.classList.add('numeros-das-notas')
+        const numerosGrafico = document.createElement('span')
+        numerosGrafico.classList.add()
+        numerosGrafico.textContent = disciplina.media
 
-//     const chart = document.createElement('div')
-//     chart.classList.add('chart')
+        disciplinaContainer.append(numerosGrafico)
 
-//     const nomesDasMaterias = document.createElement('div')
-//     nomesDasMaterias.classList.add('nomes-das-materias')
+        const disciplinasBarras = document.createElement('div')
+        disciplinasBarras.classList.add('disciplinas-bar')
 
-//     cardGrafico.append(numeros)
-//     cardGrafico.append(chart)
-//     cardGrafico.append(nomesDasMaterias)
+        const valor = document.createElement('div')
+        valor.classList.add('barras')
 
-//     return cardGrafico
-// }
+        setTimeout(() => {
+            valor.style.height = disciplina.media + '%'
+        }, 100);
 
-// const carregarCards = () => {
-//     const cardsAlunos = document.getElementById('container-aluno')
-//     const containerAluno = cardAluno(cards)
-//     const containerGrafico = cardGrafico(matriculaAluno)
-//     cardsAlunos.append(containerAluno, containerGrafico)
-// }
+        if (disciplina.media < 50) {
+            valor.classList.add('barra-vermelho')
+        } else if (disciplina.media >= 50 && disciplina.media <= 70) {
+            valor.classList.add('barra-amarelo')
+        }
+        
+        console.log('if entrandooooo');
+        disciplinaBarras.append(disciplinasBarras)
+        disciplinasBarras.append(valor)
 
-// carregarCards()
+        const disciplinas = document.createElement('span')
+        disciplinas.classList.add()
+        disciplinas.textContent = disciplina.sigla
+
+        nomeDisciplinaContainer.append(disciplinas)
+
+        if (disciplina.media < 50) {
+            numerosGrafico.classList.add('numeroNome-Vermelho')
+            disciplinas.classList.add('numeroNome-Vermelho')
+        } else if (disciplina.media >= 50 && disciplina.media <= 70) {
+            numerosGrafico.classList.add('numeroNome-Amarelo')
+            disciplinas.classList.add('numeroNome-Amarelo')
+        }
+
+    })
+
+    containerPai.append(disciplinaContainer)
+    containerPai.append(disciplinaBarras)
+    containerPai.append(nomeDisciplinaContainer)
+
+    return containerPai
+}
+
+const loadCardAluno = () => {
+    const cardAlunos = document.getElementById('cardsContainer')
+    const listaAlunos = criarCardAluno(showAlunosMatriculas)
+    const containerGrafico = criarCardGrafico(showAlunosMatriculas)
+
+    cardAlunos.append(listaAlunos, containerGrafico)
+}
+
+loadCardAluno()
+console.log('teste')

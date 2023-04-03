@@ -9,14 +9,22 @@ const carregarTurma = (turma) => {
 
     nomeCurso.innerHTML = turma.curso.slice(6)
 
-    const cardDoAluno = document.createElement('a')
-    cardDoAluno.classList.add('card-aluno')
-    cardDoAluno.href = "../../html/aluno.html"
+    const matriculaAluno = document.createElement('span')
+    matriculaAluno.classList.add('matricula')
+    matriculaAluno.textContent = turma.matricula
+
+
+    const containerCard = document.createElement('a')
+    containerCard.classList.add('containerCard')
+    containerCard.setAttribute('href', 'http://127.0.0.1:5500/html/aluno.html')
+    containerCard.addEventListener('click', () => {
+        localStorage.setItem('matricula', matriculaAluno.textContent)
+    })
 
     if (turma.status == 'Cursando') {
-        cardDoAluno.classList.add('color-cursando')
+        containerCard.classList.add('color-cursando')
     } else {
-        cardDoAluno.classList.add('color-finalizado')
+        containerCard.classList.add('color-finalizado')
     }
 
     const imagensDosAlunos = document.createElement('img')
@@ -30,16 +38,9 @@ const carregarTurma = (turma) => {
     const matricula = document.createElement('span')
     matricula.textContent = turma.matricula
 
-    cardDoAluno.addEventListener('click', () => {
-        localStorage.setItem('matricula', matricula.textContent)
+    containerCard.append(imagensDosAlunos, nomeDoAluno)
 
-        window.location.href = 'http://127.0.0.1:5500/html/aluno.html'
-    })
-
-
-    cardDoAluno.append(imagensDosAlunos, nomeDoAluno)
-
-    return cardDoAluno
+    return containerCard
 
 }
 

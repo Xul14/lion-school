@@ -1,3 +1,16 @@
+:root {
+    --header-color: #3347B0;
+    --body-color: #f5f5f5;
+    --footer-color: #3347B0;
+    --text-color: #FFFFFF;
+    --header-status-color: #BCC2E5;
+    --header-square-yellow: #E5B657;
+    --red-note: #C11010;
+    --bars-color: #EEEFF8;
+}
+
+
+
 body {
     width: 100%;
     height: 100vh;
@@ -63,141 +76,231 @@ footer {
 
 /* header feito */
 
-.container {
+/* ---------------- */
+.cardsContainer {
     display: flex;
-    justify-content: center;
-    justify-content: space-around;
-    margin-top: 4%;
+    flex-wrap: wrap;
+    gap: 239px;
 }
 
 .card-aluno {
-    width: 500px;
-    height: 500px;
     display: flex;
     flex-direction: column;
-    /* padding: 40px 6vh 7px; */
-    justify-content: center;
     align-items: center;
-    border-radius: 1px;
-    box-shadow: 0 10px 5px 5px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    justify-content: center;
+    width: 500px;
+    height: 500px;
+    background-color: var(--text-color);
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
     cursor: pointer;
 }
+
 
 .card-aluno:hover {
     transform: scale(1.1);
 }
 
-.card-aluno img {
-    display: flex;
+.img-aluno {
     width: 400px;
     height: 400px;
+    justify-content: center;
 }
 
-.p-aluno {
-    font-size: 2.5vh;
-    color: #3347B0;
-    text-align: center;
+.nome-aluno {
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    padding-top: 3%;
-
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    color: var(--header-color);
+}
+/* -------------------------- */
+.card-pai {
+    width: 500px;
+    height: 500px;
+    gap: 240px;
+    background-color: var(--text-color);
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
 }
 
+.card-pai:hover {
+    transform: scale(1.1);
+}
 
-/* * {
-    font-family: 'Fira Mono', sans-serif;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0; 
-  }
-  
-  body {
-    height: 100vh;
-    width: 100vw;
-  }
-  
-  #container {
-    width: 50vw;
-    margin: 0 auto;
-    rotate: 270deg;
-  }
-  
-  .progress {
-    width: 300px;
-    margin-bottom: 50px;
-  }
-    div {
-      height: 5px;
-      width: 0;
-    } */
-    .container-grafico {
-        width: 500px;
-        height: 500px;
-        border-radius: 1px;
-        box-shadow: 10 10px 5px 5px rgba(0, 0, 0, 0.1);
-        /* overflow: hidden; */
-        cursor: pointer;
-      }
-      /* .container-grafico:hover{
-        transform: scale(1.0);
+.disciplina-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 57px;
+    gap: 45px;
+    text-align: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 700;
+    width: 100%;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
 
-      } */
+.disciplina-barras{
+    display: flex;
+    height: 300px;
+    align-items: flex-end;
+    background-color: #EEEFF8;
+    border-radius: 4px 4px 0px 0px;
+}
 
-      
-      
-      .numeros {
-        display: flex;
-        justify-content: space-between;
-        /* padding-left: 8px; //verificar */
-        padding-right: 1px;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 27px;
-        text-align: center;
-        text-transform: uppercase;
-        color: #3347B0;
-        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-      }
-      .preenchimento{
-        display: flex;
-        height: 500px;
-        align-items: flex-end;
-        background-color: lightgray;
-        border-radius: 4px 4px 0px 0px;
-      }
-      .chart {
-        display: flex;
-        height: 500px;
-        width: 500px;
-        justify-content: space-between;
-        align-items: flex-end;
-      }
-      
-      .bar {
-        display: flex;
-        justify-content: space-between;
-        width: 16px;
-        background-color: #3347B0;
-        text-align: center;
-        box-shadow: 0px 0px 24px #3347B0;
-        border-radius: 4px 4px 0px 0px;
-      }
-      
-      /* ver tbm o nome */
-      .nomes{
-        display: flex;
-        justify-content: space-between;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 27px;
-        text-align: center;
-        text-transform: uppercase;
-        color: #3347B0;
-        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-      }
-      
+.barras {
+    display: flex;
+    justify-content: space-between;
+    width: 16px;
+    background-color: #3347B0;
+    text-align: center;
+    box-shadow: 0px 0px 24px #3347B0;
+    border-radius: 4px 4px 0px 0px;
+}
+
+.disciplinasBarras {
+    display: flex;
+    margin-top: 17px;
+    gap: 49px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+/* ----------------- */
+/* .firstDisciplineBar {
+    width: 16px;
+    height: 300px;
+    background-color: var(--bars-color);
+    align-items: flex-end;
+    display: flex;
+}
+
+.firstDisciplineBarColor {
+    width: 16px;
+    height: 248px;
+    background-color: var(--header-color);
+    box-shadow: 0px 0px 24px var(--header-color);
+    border-radius: 4px 4px 0px 0px;
+}
+
+.secondDisciplineBar {
+    width: 16px;
+    height: 300px;
+    background-color: var(--bars-color);
+    align-items: flex-end;
+    display: flex;
+}
+
+.secondDisciplineBarColor {
+    width: 16px;
+    height: 87px;
+    background-color: var(--red-note);
+    box-shadow: 0px 0px 24px var(--red-note);
+    border-radius: 4px 4px 0px 0px;
+}
+
+.thirdDisciplineBar {
+    width: 16px;
+    height: 300px;
+    background-color: var(--bars-color);
+    align-items: flex-end;
+    display: flex;
+}
+
+.thirdDisciplineBarColor {
+    width: 16px;
+    height: 150px;
+    background-color: var(--header-square-yellow);
+    box-shadow: 0px 0px 24px var(--header-square-yellow);
+    border-radius: 4px 4px 0px 0px;
+}
+
+.fourthDisciplineBar {
+    width: 16px;
+    height: 300px;
+    background-color: var(--bars-color);
+    align-items: flex-end;
+    display: flex;
+}
+
+.fourthDisciplineBarColor {
+    width: 16px;
+    height: 248px;
+    background-color: var(--header-color);
+    box-shadow: 0px 0px 24px #3347B0;
+    border-radius: 4px 4px 0px 0px;
+}
+
+.fifthDisciplineBar {
+    width: 16px;
+    height: 300px;
+    background-color: var(--bars-color);
+    align-items: flex-end;
+    display: flex;
+}
+
+.fifthDisciplineBarColor {
+    width: 16px;
+    height: 206px;
+    background-color: var(--header-color);
+    box-shadow: 0px 0px 24px #3347B0;
+    border-radius: 4px 4px 0px 0px;
+}
+
+.sixthDisciplineBar {
+    width: 16px;
+    height: 300px;
+    background-color: var(--bars-color);
+    align-items: flex-end;
+    display: flex;
+}
+
+.sixthDisciplineBarColor {
+    width: 16px;
+    height: 300px;
+    background-color: var(--header-color);
+    box-shadow: 0px 0px 24px #3347B0;
+    border-radius: 4px 4px 0px 0px;
+}
+
+.sixthDisciplineNumber {
+    color: var(--header-color);
+} */
+
+.barra-vermelho {
+    background-color: var(--red-note);
+    box-shadow: 0px 0px 24px var(--red-note);
+}
+
+.barra-amarelo {
+    background-color: var(--header-square-yellow);
+    box-shadow: 0px 0px 24px var(--header-square-yellow);
+}
+
+.numeroNome-Vermelho {
+    color: #C11010;
+}
+
+.numeroNome-Amarelo {
+    color: #E5B657;
+}
+
+.nome-disciplina-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 16px;
+    gap: 36px;
+    text-align: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 700;
+    width: 100%;
+    color: var(--header-color);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* ---------------- */
 /* footer */
 .container-contatos {
     display: flex;
@@ -285,31 +388,36 @@ footer {
     .exit {
         font-size: 1.5rem;
     }
-    
-    .container{
+
+    .container {
         display: flex;
         flex-direction: column;
         justify-content: center;
 
     }
-    .grafico-notas{
+
+    .grafico-notas {
         display: none;
     }
-    .card-aluno img{
+
+    .card-aluno img {
         background-color: #3347B0;
         width: 55%;
         height: 70%;
 
     }
-    .card-aluno{
+
+    .card-aluno {
         width: 100%;
         height: 100%;
     }
-    .p-aluno{
+
+    .p-aluno {
         width: 70%;
         height: 70%;
 
     }
+
     /* main {
         flex-direction: column;
         align-items: center;
