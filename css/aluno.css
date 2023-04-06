@@ -144,7 +144,11 @@ footer {
 .nomesDisciplinasContainer {
     display: flex;
     margin-top: 16px;
+<<<<<<< HEAD
     gap: 39px;
+=======
+    gap: 41px;
+>>>>>>> ddf19b0af8df2360c791e6b7dd6d8bc89ff72dab
     text-align: center;
     justify-content: center;
     font-size: 1rem;
@@ -309,9 +313,14 @@ footer {
         height: 200px;
     }
     .cardPai {
+<<<<<<< HEAD
         cursor: none;
         width: 750px;
         height: 370px;
+=======
+        width: 360px;
+        height: 380px;
+>>>>>>> ddf19b0af8df2360c791e6b7dd6d8bc89ff72dab
     }
     .bar {
         width: 12px;
@@ -340,7 +349,10 @@ footer {
         width: 100%;
         padding-top: 100px;
         gap: 10px;
+<<<<<<< HEAD
         
+=======
+>>>>>>> ddf19b0af8df2360c791e6b7dd6d8bc89ff72dab
     }
 
     .barrinha-vermelha {
@@ -355,7 +367,10 @@ footer {
     
     .numeroNome-Azul {
         color:  #3347B0;
+<<<<<<< HEAD
         width: 48px;
+=======
+>>>>>>> ddf19b0af8df2360c791e6b7dd6d8bc89ff72dab
     }
     
     .numeroNome-Vermelho {
