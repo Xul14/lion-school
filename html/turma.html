@@ -7,7 +7,8 @@
     <link rel="shortcut icon" href="./img/logo-image.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
     <title>Lion School</title>
     <script src="../js/turma.js" defer type="module"></script>
     <script src="https://kit.fontawesome.com/30058942d9.js" crossorigin="anonymous"></script>
@@ -23,10 +24,11 @@
                 <p>Lion <br>School</p>
             </div>
         </div>
-        <div class="exit">
+        <div class="exit" id="exit">
             <a href="#">
-                <i class="fas fa-sign-out" style=" color: #fff;"></i>
+                <i class="fas fa-backward" style=" color: #fff;"></i>
             </a>
+
             <p class="text-sair">Voltar</p>
         </div>
     </header>
@@ -36,17 +38,25 @@
 
             <div class="barra-status">
                 <p class="conteudo-status">
-                    <div class="status">
-                        <div class="dropdown">
-                            <button class="dropbtn">Status</button>
-                            <div class="dropdown-content">
-                                <a href="#">Status</a>
-                                <a href="#">Finalizado</a>
-                                <a href="#">Cursando</a>
-                            </div>
+                <div class="status">
+                    <div class="dropdown">
+                        <button class="dropbtn">Status</button>
+                        <div class="dropdown-content">
+                            <a href="#" class="card- status" id="status">Status</a>
+                            <a href="#" id="finalizado" class="card- finalizado">Finalizado</a>
+                            <a href="#" id="cursando" class="card- cursando">Cursando</a>
                         </div>
+
                     </div>
+                </div>
                 </p>
+
+                <div class="date-ano">
+                    <label for="">Ano de conclusão:
+                    </label>
+                    <input id="date" type="date">
+                </div>
+
                 <div class="container-status">
                     <p class="text">LEGENDA</p>
                     <div class="container-dos-status">
@@ -66,7 +76,7 @@
         <!-- -------Barra de status feita------------- -->
 
 
-        <h2 class= "titulo-do-curso" id="titulo-do-curso"></h2>
+        <h2 class="titulo-do-curso" id="titulo-do-curso"></h2>
 
 
         <div class="container-cards" id="container-cards">

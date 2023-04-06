@@ -1,9 +1,16 @@
 'use strict'
 
 import { carregarAlunosCurso } from "../js/ApiTurma.js"
+import { carregarAlunosStatus } from "../js/ApiTurma.js"
 
 const carregarAlunos = await carregarAlunosCurso()
 const nomeCurso = document.getElementById('titulo-do-curso')
+
+const buttonExit = document.getElementById('exit')
+
+buttonExit.addEventListener('click', () => {
+    window.location.href = 'http://127.0.0.1:5500/html/home.html'
+})
 
 const carregarTurma = (turma) => {
 
@@ -44,6 +51,26 @@ const carregarTurma = (turma) => {
 
 }
 
+const cursandoFinalizado = () => {
+    const buttons = document.querySelectorAll('.card- ')
+
+    buttons.forEach(button => {
+        button.addEventListener('click', async () => {
+
+            const statusSelecionado = button.id
+            if (button.id == "status") {
+                carregarDadosDaTurma()
+            } else {
+                const retorna = await carregarAlunosStatus(statusSelecionado)
+                const cardJson = retorna.status.map(carregarTurma)
+                const listCourses = document.getElementById('container-cards')
+                listCourses.replaceChildren(...cardJson)  
+
+            }
+        })
+    })
+}
+
 const carregarDadosDaTurma = () => {
     const elementosDoContainerTurma = document.getElementById('container-cards')
     const curso = carregarAlunos.curso.map(carregarTurma)
@@ -51,3 +78,4 @@ const carregarDadosDaTurma = () => {
 }
 
 carregarDadosDaTurma()
+cursandoFinalizado()

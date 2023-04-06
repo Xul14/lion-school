@@ -85,7 +85,7 @@ footer {
 .quadrado-finalizado {
     width: 20px;
     height: 20px;
-    background-color: #fffc4a;
+    background-color:#E5B657;
 }
 
 .dropdown {
@@ -154,7 +154,7 @@ footer {
     place-items: center;
 }
 
-.containerCard{
+.containerCard {
     width: 200px;
     height: 300px;
     display: flex;
@@ -202,10 +202,12 @@ footer {
     color: white;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.color-cursando{
-    background-color:#3347B0;
+
+.color-cursando {
+    background-color: #3347B0;
 }
-.color-finalizado{
+
+.color-finalizado {
     background-color: #E5B657;
 }
 
@@ -285,36 +287,51 @@ footer {
         justify-content: space-around;
         padding: 20px 0;
     }
+
     .logo-header img {
         height: 65px;
         width: 50px;
     }
+
     .titulo-da-escola {
         font-size: 1.40rem;
     }
+
     .exit {
         font-size: 1.5rem;
     }
-    .titulo-do-curso h2 {
-        font-size: 2.5rem;
+
+    .titulo-do-curso {
+        font-size: 1.5rem;
+        justify-content: center;
         text-align: center;
     }
+
+    .container-status p {
+        width: 55px;
+    }
+
     .dropdown {
         display: flex;
         align-items: center;
     }
+
     .text {
         display: none;
     }
+
     .container-cards {
         grid-template-columns: repeat(1, 1fr);
+        gap: 2%;
     }
+
     footer {
         flex-direction: column;
         gap: 32px;
         padding: 32px;
         height: auto;
     }
+
     .copyright {
         width: 375px;
         border-top: 1px solid #FFFFFF;
@@ -322,6 +339,7 @@ footer {
         font-size: 0.9rem;
         text-align: center;
     }
+
     .redes-sociais-icones {
         flex-direction: column;
     }
