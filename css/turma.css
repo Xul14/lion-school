@@ -101,7 +101,7 @@ footer {
 
 .dropdown:hover .dropdown-content {
     display: block;
-    background-color: #1a2975;
+    background-color: #3347B0;
 }
 
 .dropbtn {
@@ -122,12 +122,45 @@ footer {
     background-color: #4a69ff;
 }
 
+/* -------------------anos-------------- */
+.dropdown-anos {
+    background-color: #4a69ff;
+    position: relative;
+    display: inline-block; 
+}
+
+.buttom-ano {
+    background-color: #BCC2E5;
+    color:  #3347B0;
+    font-weight: 500;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-anos:hover .dropdown-anos-disponiveis {
+    display: block;
+    background-color: #3347B0;
+    color: #fff;
+    margin-left: 7%;
+}
+
+.dropdown-anos-disponiveis {
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+
+.dropdown-anos-disponiveis a {
+    color: #ffffff;
+    padding: 12px 16px;
+    display: block;
+    cursor: pointer;
+}
 
 /* --------Barra feita ------- */
 
-.container-pai {
-    /* background-color: #fffc4a; */
-}
 
 .container-dos-alunos {
     width: 100%;
@@ -211,45 +244,7 @@ footer {
     background-color: #E5B657;
 }
 
-.dropdownYear {
-    position: relative;
-    display: inline-block;
-    padding-right: 130vh;
-}
 
-.dropdownYearContent {
-    display: none;
-    position: absolute;
-    z-index: 1;
-}
-
-.dropdownYear:hover .dropdownYearContent {
-    display: block;
-    background-color: var(--header-color);
-}
-
-.dropdownButtonYear {
-    background-color: var(--header-status-color);
-    color: var(--header-color);
-    font-weight: 500;
-    padding: 10px;
-    font-size: 1rem;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0  10px 10px rgba(0, 0, 0, 0.1);
-}
-
-.dropdownYearContent a {
-    color: var(--text-color);
-    padding: 12px 16px;
-    display: block;
-    cursor: pointer;
-}
-
-.dropdownYearContent a:hover {
-    background-color: var(--header-status-color);
-    color: var(--header-color);
-}
 /* --------Conteudos main feitos  ------- */
 
 .container-contatos {
