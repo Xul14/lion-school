@@ -3,15 +3,12 @@
 import { showAlunosMatricula } from "../js/ApiAluno.js";
 
 const showAlunosMatriculas = await showAlunosMatricula();
-<<<<<<< HEAD
 
 const buttonExit = document.getElementById('exit')
 
 buttonExit.addEventListener('click', () => {
     window.location.href = 'http://127.0.0.1:5500/html/turma.html'
 })
-=======
->>>>>>> ddf19b0af8df2360c791e6b7dd6d8bc89ff72dab
 
 const criarCardAluno = (aluno) => {
 
@@ -40,12 +37,6 @@ const criarCardGrafico = () => {
 
     const disciplinasBarras = document.createElement('div')
     disciplinasBarras.classList.add('disciplinasBarras')
-<<<<<<< HEAD
-    
-    // const cardProsNomesDisciplinas = document.createElement('div')
-    // cardProsNomesDisciplinas.classList.add('cardProsNomesDisciplinas')
-=======
->>>>>>> ddf19b0af8df2360c791e6b7dd6d8bc89ff72dab
 
     const nomesDisciplinasContainer = document.createElement('div')
     nomesDisciplinasContainer.classList.add('nomesDisciplinasContainer')
@@ -63,6 +54,7 @@ const criarCardGrafico = () => {
 
         const valor = document.createElement('div')
         valor.classList.add('valorBarra')
+        valor.setAttribute('title', disciplina.nome);
 
         setTimeout(() => {
             valor.style.height = disciplina.media + '%'
