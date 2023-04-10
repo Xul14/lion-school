@@ -3,13 +3,14 @@
 
 # Interfaces desenvolvidas
 
-![](./img/turma.jpeg)
+![](./img/home.jpeg)
  
 --- 
 <br>
 
 
-![](./img/home.jpeg)
+![](./img/turma.jpeg)
+
 
 ---
 <br>
