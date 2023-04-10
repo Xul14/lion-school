@@ -1,5 +1,5 @@
 export const carregarCards = async() => {
-    const url = `http://localhost:8080/v1/lion-school/cursos`
+    const url = `https://lion-school.cyclic.app/v1/lion-school/cursos`
     const response = await fetch(url)
     const card = await response.json()
 
