@@ -1,14 +1,15 @@
 # Lion-School
 
 
-# Interfaces
+# Interfaces desenvolvidas
 
-![](./img/home.jpeg)
+![](./img/turma.jpeg)
  
 --- 
 <br>
 
-![](./img/turma.jpeg)
+
+![](./img/home.jpeg)
 
 ---
 <br>
@@ -18,8 +19,8 @@
 <br>
 
 ## Objetivo
-Site criado com o objetivo de colocarmos em prática nossos conhecimentos adquiridos no curso do [SENAI - JANDIRA]
-Todos as informações/dados desse site vem diretamente de uma API criada pela minha dupla que ficou responsável por todo Back-End, as APIS foram integradas para o Front o deixando totalmente funcional.
+Site criado com o objetivo de colocarmos em prática nossos novos conhecimentos adquiridos no curso do SENAI- JANDIRA. <br>
+Todas as informações/dados desse site vem diretamente de uma API criada pela minha dupla que ficou responsável por todo Back-End, as APIS foram integradas para o Front o deixando totalmente funcional.
 
 <br>
 
