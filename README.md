@@ -39,7 +39,8 @@ Todas as informações/dados desse site vem diretamente de uma API criada pela m
 
 <br>
 
-[Link - Figma] (https://www.figma.com/file/WlWIzzu0LiC2yAVQ0BrzJa/Untitled?node-id=0-1&t=xvzo2O9MFGO2C9dn-0)
+- [Link - Figma](https://www.figma.com/file/WlWIzzu0LiC2yAVQ0BrzJa/Untitled?node-id=0-1&t=xvzo2O9MFGO2C9dn-0)
+
 <br>
 
 - [X] Criou layout conforme designer feito no Figma?
@@ -51,7 +52,7 @@ Todas as informações/dados desse site vem diretamente de uma API criada pela m
 - [X] A maioria das funções seguem as boas práticas como responsabilidade única?
 - [X] Foi criado o layout responsivo no Figma?
 - [X] Foi implementado a responsividade conforme planejado no Figma?
-- [ ] Foi criado o filtro por ano?
+- [X] Foi criado o filtro por ano?
 
 <br>
 

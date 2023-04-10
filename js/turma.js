@@ -71,47 +71,48 @@ const cursandoFinalizado = () => {
     })
 }
   
-// const pegarConclusaoAno = (alunos) =>{
-//     let anos = []
+const pegarConclusaoAno = (alunos) =>{
+    let anos = []
 
-//     alunos.forEach(aluno => {
-//         anos.push(aluno.curso[0].conclusao)
+    alunos.forEach(aluno => {
+        anos.push(aluno.conclusao)
 
-//     })
-//     let conclusaoAnos = anos.filter((este, i) => years.indexOf(este) === i)
-//     return conclusaoAnos.sort()
-// }
+    })
+    let conclusaoAnos = anos.filter((este, i) => anos.indexOf(este) === i)
+    return conclusaoAnos.sort()
+}
 
-// const anos = pegarConclusaoAno(carregarAlunos.alunos)
+const anos = pegarConclusaoAno(carregarAlunos.curso)
+console.log(anos);
 
-// const conclusaoAno = async (ano) =>{
-//     const alunosJSON = {}
-//     const alunosArray = []
+const conclusaoAno = async (ano) =>{
+    const alunosJSON = {}
+    const alunosArray = []
 
-//     carregarAlunos.alunos.forEach(aluno => {
-//         if (aluno.curso[0].conclusao == ano){
-//             alunosArray.push(aluno)
-//         }
-//     })
-//     alunosJSON.alunos = alunosArray
-//     return alunosJSON
-// }
+    carregarAlunos.curso.forEach(aluno => {
+        if (aluno.conclusao == ano){
+            alunosArray.push(aluno)
+        }
+    })
+    alunosJSON.alunos = alunosArray
+    return alunosJSON
+}
 
-// const criarCardAno = (anos) =>{
-//     const container = document.getElementById('dropdown-anos-disponiveis')
-//     anos.forEach(ano => {
-//         const card = document.createElement('a')
-//         card.id = `${ano}`
-//         card.innerHTML = ano
-//         card.addEventListener('click', async () => {
-//             const returns = await conclusaoAno(ano)
-//             const cardJSON = returns.alunos.map(carregarTurma)
-//             const card = document.getElementById('containerCard')
-//             card.replaceChildren(...cardJSON)
-//         })
-//         container.append(card)
-//     })
-// }
+const criarCardAno = (anos) =>{
+    const container = document.getElementById('dropdown-anos-disponiveis')
+    anos.forEach(ano => {
+        const card = document.createElement('a')
+        card.id = `${ano}`
+        card.innerHTML = ano
+        card.addEventListener('click', async () => {
+            const returns = await conclusaoAno(ano)
+            const cardJSON = returns.alunos.map(carregarTurma)
+            const card = document.getElementById('container-cards')
+            card.replaceChildren(...cardJSON)
+        })
+        container.append(card)
+    })
+}
 
 const carregarDadosDaTurma = () => {
     const elementosDoContainerTurma = document.getElementById('container-cards')
@@ -119,6 +120,6 @@ const carregarDadosDaTurma = () => {
 
     elementosDoContainerTurma.replaceChildren(...curso)
 }
-// criarCardAno(anos)
+criarCardAno(anos)
 carregarDadosDaTurma()
 cursandoFinalizado()
