@@ -110,6 +110,7 @@ footer {
     padding: 12px;
     font-size: 1rem;
     border: none;
+
 }
 
 .dropdown-content a {
@@ -124,7 +125,7 @@ footer {
 
 /* -------------------anos-------------- */
 .dropdown-anos {
-    background-color: #4a69ff;
+    background-color: #BCC2E5;
     position: relative;
     display: inline-block; 
 }
@@ -134,7 +135,6 @@ footer {
     color:  #3347B0;
     font-weight: 500;
     padding: 10px;
-    font-size: 1rem;
     border: none;
     cursor: pointer;
 }
@@ -349,7 +349,18 @@ footer {
         display: flex;
         align-items: center;
     }
-
+    .dropdown-anos{
+        display: flex;
+        align-items: center;
+        
+    }
+    .buttom-ano{
+     
+    
+    }
+    .container-dos-status{
+        display: none;
+    }
     .text {
         display: none;
     }
