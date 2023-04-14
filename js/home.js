@@ -33,7 +33,7 @@ const criarCards = (card) => {
     cardsCursos.addEventListener('click', () => {
         localStorage.setItem('curso', nomeDoCurso.textContent)
         
-        window.location.href = 'http://127.0.0.1:5500/html/turma.html'
+        window.location.href = 'http://127.0.0.1:5500/turma.html'
     })
 
     cardsCursos.append(containerCurso)

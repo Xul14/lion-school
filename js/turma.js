@@ -23,7 +23,7 @@ const carregarTurma = (turma) => {
 
     const containerCard = document.createElement('a')
     containerCard.classList.add('containerCard')
-    containerCard.setAttribute('href', 'http://127.0.0.1:5500/html/aluno.html')
+    containerCard.setAttribute('href', 'http://127.0.0.1:5500/aluno.html')
     containerCard.addEventListener('click', () => {
         localStorage.setItem('matricula', matriculaAluno.textContent)
     })
