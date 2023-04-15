@@ -16,8 +16,9 @@ const criarCards = (card) => {
     const cardsCursos = document.createElement('div')
     cardsCursos.classList.add('container-cards-cursos')
 
-    const containerCurso = document.createElement('div')
+    const containerCurso = document.createElement('a')
     containerCurso.classList.add('curso-container')
+    containerCurso.setAttribute('href', '../html/turma.html')
 
     const tipoCurso = document.createElement('div')
     tipoCurso.classList.add('titulo-do-curso')
@@ -33,7 +34,7 @@ const criarCards = (card) => {
     cardsCursos.addEventListener('click', () => {
         localStorage.setItem('curso', nomeDoCurso.textContent)
         
-        window.location.href = 'http://127.0.0.1:5500/html/turma.html'
+        // window.location.href = 'http://127.0.0.1:5500/html/turma.html'
     })
 
     cardsCursos.append(containerCurso)

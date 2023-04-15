@@ -7,7 +7,7 @@ const showAlunosMatriculas = await showAlunosMatricula();
 const buttonExit = document.getElementById('exit')
 
 buttonExit.addEventListener('click', () => {
-    window.location.href = 'http://127.0.0.1:5500/html/turma.html'
+    window.location.href = '../html/turma.html'
 })
 
 const criarCardAluno = (aluno) => {
