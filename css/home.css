@@ -19,7 +19,7 @@ header {
 
 main {
     display: flex;
-    margin-left: 10%;
+    margin-left: 8%;
 }
 
 footer {
@@ -221,6 +221,7 @@ footer {
         align-items: center;
         gap: 28px;
         padding: 30px;
+        margin-left: none;
     }
     .description-curso p {
         font-size: 2rem;
@@ -229,6 +230,10 @@ footer {
     }
     .image-dispositivos {
         display: none;
+    }
+    .image-studant {
+        width: 200px;
+        height: 350px;
     }
     .curso-container {
         width: 260px;

@@ -6,7 +6,6 @@ import { carregarCards } from "../js/ApiHome.js"
 const cards = await carregarCards()
 
 const buttonExit = document.getElementById('exit')
-
 buttonExit.addEventListener('click', () => {
     window.close()
 })
